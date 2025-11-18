@@ -7,12 +7,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "hamza-wakrim/api-framework": "^1.0.x-dev"
+        "hamza-wakrim/api-framework": "1.0.x-dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.24",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^11.5.3"
@@ -38,7 +36,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" --names=server,queue,logs --kill-others"
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" --names=server,queue --kill-others"
         ],
         "test": [
             "@php artisan config:clear --ansi",
