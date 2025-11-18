@@ -1,0 +1,11 @@
+{
+    "$schema": "https://www.schemastore.org/package.json",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "concurrently \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" --names=server,queue,logs --kill-others"
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.1"
+    }
+}
