@@ -7,7 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "hamza-wakrim/api-framework": "^1.0.0"
+        "hamza-wakrim/api-framework": "^1.0@dev"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
