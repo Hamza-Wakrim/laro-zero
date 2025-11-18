@@ -7,8 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "hamza-wakrim/api-framework": "^1.0",
-        "laravel/tinker": "^2.10.1"
+        "hamza-wakrim/api-framework": "^1.0.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
