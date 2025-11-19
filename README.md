@@ -64,35 +64,35 @@ Route → Controller → Service → Model
 
 ```php
 // routes/api.php
-Route::get('/users', [UserController::class, 'index']);
+Route::get('/examples', [ExamplesController::class, 'index']);
 
-// app/Http/Controllers/UserController.php
-class UserController extends Controller
+// app/Http/Controllers/ExamplesController.php
+class ExamplesController extends Controller
 {
     public function __construct(
-        private UserService $userService
+        private ExampleService $exampleService
     ) {
-        $this->validateService($userService);
+        $this->validateService($exampleService);
     }
 
     public function index(): JsonResponse
     {
-        $users = $this->userService->getAllUsers();
+        $users = $this->exampleService->getAllUsers();
         return response()->json($users);
     }
 }
 
-// app/Services/UserService.php
-class UserService extends Service
+// app/Services/ExampleService.php
+class ExampleService extends Service
 {
     public function getAllUsers()
     {
-        return User::all(); // Interacts with Model
+        return Examples::all(); // Interacts with Model
     }
 }
 
-// app/Models/User.php
-class User extends Model
+// app/Models/Examples.php
+class Examples extends Model
 {
     // Model definition only
 }
